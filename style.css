@@ -1,7 +1,7 @@
 #tudo{
     padding: 10px 35px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 70px;
 }
     
