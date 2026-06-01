@@ -1,8 +1,7 @@
-/* Paleta de cores */
     :root{
-        --HRtit: white;
+        --HRtit: rgb(219, 219, 219);
         --fundoReviews: rgb(45, 45, 45);
-        --blocoSelecionado: rgb(184, 78, 78);
+        --blocoSelecionado: rgb(171, 95, 51);
         --blocoNormal: rgb(80, 80, 80);
     }
 
@@ -55,10 +54,10 @@ body{
 }
 #img{
     width: 100px;
-    height: 100px;
+    height: 150px;
 }
 #textin{
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* oq fazer abaixo? */

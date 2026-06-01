@@ -7,8 +7,8 @@ const titulos = [
     "Hollow Knight: Silksong", 
 ]
 const caminhoimgs = [
-    "tboi.webp", 
-    "silksong.jpeg", 
+    "tboi.png", 
+    "silksong.png", 
 ]
 const links = [
     "tboi", 
