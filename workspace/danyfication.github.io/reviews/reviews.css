@@ -1,0 +1,89 @@
+    :root{
+        --tboiGameColor: rgb(150, 97, 0);
+        --silksongGameColor: rgb(206, 83, 83);
+        --backgroundGame:rgb(75, 75, 75);
+        --backgroundDesc:rgb(50, 50, 50);
+        --lightTexts: rgb(219, 219, 219);
+        --darkTexts: rgb(23, 23, 23);
+    }
+
+body{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;  
+    padding: 0;
+}
+
+
+/*parte esquerda*/
+#game{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundGame);
+    width: 40%;
+    height: 100vh;
+    justify-content: top;
+    align-items: center;
+    
+}
+/*parte da direita*/
+#desc{
+    background-color: var(--backgroundDesc);
+    width: 60%;
+    height: 100vh;
+    padding: 0px 20px;
+}
+
+#Tit{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--darkTexts);
+}
+#Img{
+    width: 50%;
+    height: 65%;
+}
+#Nota{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--darkTexts);
+}
+#Desc1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--darkTexts);
+    text-align: center;
+}
+#Sobre{
+    font-family: ar'Arial Narrow Bold', sans-serif;
+    color: var(--lightTexts);
+}
+#Desc2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--lightTexts);
+}
+
+
+/*estilo de TBOI*/
+#tboiTitDiv{
+    background-color: var(--tboiGameColor);
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/*estilo de SILKSONG*/
+#silksongTitDiv{
+    background-color: var(--silksongGameColor);
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
