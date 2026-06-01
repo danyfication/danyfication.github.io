@@ -1,0 +1,22 @@
+    :root{
+        --gameColor: rgb(170, 113, 7);
+        --backgroundGame:rgb;
+    }
+
+body{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#game{
+    background-color: var(--gameColor);
+    width: 40%;
+    height: 100vh;
+}
+#desc{
+    background-color: blue;
+    width: 60%;
+    height: 100vh;
+}

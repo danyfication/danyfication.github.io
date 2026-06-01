@@ -2,21 +2,23 @@
     :root{
         --HRtit: white;
         --fundoReviews: rgb(45, 45, 45);
-        --blocoSelecionado: rgb(200, 129, 29);
+        --blocoSelecionado: rgb(168, 78, 78);
         --blocoNormal: rgb(80, 80, 80);
     }
 
 /* Já é bem autodescritivo */
 #tudo{
-    padding: 10px 35px;
+    padding: 20px 35px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 70px;
 }
 
 body{
     background-color:var(--fundoReviews);
-}
+    margin: 0px;
+    padding: 0px;
+} 
 
 #headerReviews{
     display: flex;
@@ -40,10 +42,11 @@ body{
     background-color: var(--blocoNormal); 
     border: none;
     border-radius: 15px;
-    transition: scale 0.4s ease;
+    transition: all 0.4s ease;
 }
 #blocoR:hover{
     background-color: var(--blocoSelecionado);
+    color: white;
     scale: 1.1;
 }
 /* Conteúdo dos blocos de review */
