@@ -37,6 +37,6 @@ for (let index = 0; index < titulos.length; index++) {
 
 // Redirecionar para a página do review
 function jogopage(link){
-    window.location.href = "./reviews/"+link+".html";
+    window.location.href = "./reviews/reviews.html#"+link;
 
 }

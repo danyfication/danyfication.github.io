@@ -44,8 +44,8 @@ const reviewConteudo = {
 
 //pegar url pra saber qual review mostrar :)
 function getPageKey() {
-    const page = window.location.pathname.split("/").pop()
-    return page ? page.replace(".html", "") : ""
+    const page = window.location.hash
+    return page ? page.replace("#", "") : ""
 }
 
 //define qual review é pra mostrar
