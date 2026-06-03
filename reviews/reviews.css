@@ -1,6 +1,15 @@
     :root{
         --tboiGameColor: rgb(150, 97, 0);
         --silksongGameColor: rgb(206, 83, 83);
+        --astroneerGameColor: rgb(101, 13, 136);
+        --awariaGameColor: rgb(48, 205, 9);
+        --boplGameColor: rgb(241, 238, 60);
+        --btd6GameColor: rgb(129, 221, 231);
+        --ddlcGameColor: rgb(223, 137, 200);
+        --mrGameColor: rgb(239, 185, 8);
+        --postalGameColor: rgb(231, 0, 0);
+        --spgGameColor: rgb(163, 87, 221);
+        --warframeGameColor: ;
         --backgroundGame:rgb(75, 75, 75);
         --backgroundDesc:rgb(50, 50, 50);
         --lightTexts: rgb(219, 219, 219);
