@@ -63,10 +63,10 @@ for (let index = 0; index < titulos.length; index++) {
     const desc = descricoes[index];
 
     gridreview.innerHTML+=`
-        <button id="blocoR" onclick="jogopage('${link}')">
-            <h3 id="tit">${titulo}</h3>
-            <img src="./imgs/${img}" id="img">
-            <p id="textin">${desc}</p>
+        <button class="blocoR" onclick="jogopage('${link}')">
+            <h3 class="tit">${titulo}</h3>
+            <img src="./imgs/${img}" class="img">
+            <p class="textin">${desc}</p>
         </button>
     `
 }

@@ -43,12 +43,12 @@ const reviewConteudo = {
         title: "Astroneer",
         subtitle: "Quando se começa a jogar, é difícil parar, muito satisfatório",
         score: "9/10",
-        image: "../imgs/silksong.png",
+        image: "../imgs/astroneer.png",
         gameHtml: `
-            <div id="silksongTitDiv"><h1 id="silksongTit">Hollow Knight: Silksong</h1></div>
-            <img id="Img" src="../imgs/silksong.png" alt="Hollow Knight: Silksong" />
-            <h2 id="Nota"><strong>Nota:</strong> 10/10</h2>
-            <h3 id="Desc1">Metroidvania com foco em exploração, combate preciso e uma atmosfera única.</h3>
+            <div id="astroneerTitDiv"><h1 id="astroneerTit">Astroneer</h1></div>
+            <img id="Img" src="../imgs/astroneer.png" alt="Astroneer" />
+            <h2 id="Nota"><strong>Nota:</strong> 9/10</h2>
+            <h3 id="Desc1">Jogo de sobrevivência em um ambiente espacial com elementos de construção e exploração.</h3>
         `,
         descHtml: `
             <h1 id="Sobre">Sobre o jogo</h1>
@@ -60,12 +60,12 @@ const reviewConteudo = {
         title: "Awaria",
         subtitle: "Um jogo de fases curto, porém com alta dificuldade e PUDIM",
         score: "7.5/10",
-        image: "../imgs/silksong.png",
+        image: "../imgs/awaria.png",
         gameHtml: `
-            <div id="silksongTitDiv"><h1 id="silksongTit">Hollow Knight: Silksong</h1></div>
-            <img id="Img" src="../imgs/silksong.png" alt="Hollow Knight: Silksong" />
-            <h2 id="Nota"><strong>Nota:</strong> 10/10</h2>
-            <h3 id="Desc1">Metroidvania com foco em exploração, combate preciso e uma atmosfera única.</h3>
+            <div id="awariaTitDiv"><h1 id="awariaTit">Awaria</h1></div>
+            <img id="Img" src="../imgs/awaria.png" alt="Awaria" />
+            <h2 id="Nota"><strong>Nota:</strong> 7.5/10</h2>
+            <h3 id="Desc1">Jogo de fases curto com alta dificuldade e mecânica de PUDIM.</h3>
         `,
         descHtml: `
             <h1 id="Sobre">Sobre o jogo</h1>
@@ -77,12 +77,12 @@ const reviewConteudo = {
         title: "Bopl Battle",
         subtitle: "Muito divertido com amigos e alta competitividade e combinações",
         score: "8.5/10",
-        image: "../imgs/silksong.png",
+        image: "../imgs/bopl.png",
         gameHtml: `
-            <div id="silksongTitDiv"><h1 id="silksongTit">Hollow Knight: Silksong</h1></div>
-            <img id="Img" src="../imgs/silksong.png" alt="Hollow Knight: Silksong" />
-            <h2 id="Nota"><strong>Nota:</strong> 10/10</h2>
-            <h3 id="Desc1">Metroidvania com foco em exploração, combate preciso e uma atmosfera única.</h3>
+            <div id="boplTitDiv"><h1 id="boplTit">Bopl Battle</h1></div>
+            <img id="Img" src="../imgs/bopl.png" alt="Bopl Battle" />
+            <h2 id="Nota"><strong>Nota:</strong> 8.5/10</h2>
+            <h3 id="Desc1">Jogo de disputa entre amigos com alta competitividade e combinações.</h3>
         `,
         descHtml: `
             <h1 id="Sobre">Sobre o jogo</h1>
@@ -94,12 +94,12 @@ const reviewConteudo = {
         title: "bloons TD 6",
         subtitle: "O melhor do gênero tower-defense",
         score: "9/10",
-        image: "../imgs/silksong.png",
+        image: "../imgs/btd6.png",
         gameHtml: `
-            <div id="silksongTitDiv"><h1 id="silksongTit">Hollow Knight: Silksong</h1></div>
-            <img id="Img" src="../imgs/silksong.png" alt="Hollow Knight: Silksong" />
-            <h2 id="Nota"><strong>Nota:</strong> 10/10</h2>
-            <h3 id="Desc1">Metroidvania com foco em exploração, combate preciso e uma atmosfera única.</h3>
+            <div id="btd6TitDiv"><h1 id="btd6Tit">Bloon TD 6</h1></div>
+            <img id="Img" src="../imgs/btd6.png" alt="Bloon TD 6" />
+            <h2 id="Nota"><strong>Nota:</strong> 9/10</h2>
+            <h3 id="Desc1">Tower-defense incrível!</h3>
         `,
         descHtml: `
             <h1 id="Sobre">Sobre o jogo</h1>
@@ -111,12 +111,12 @@ const reviewConteudo = {
         title: "Doki Doki Literature Club",
         subtitle: "Web-novel, jogo de escolhas com reviravoltas",
         score: "8/10",
-        image: "../imgs/silksong.png",
+        image: "../imgs/ddlc.png",
         gameHtml: `
-            <div id="silksongTitDiv"><h1 id="silksongTit">Hollow Knight: Silksong</h1></div>
-            <img id="Img" src="../imgs/silksong.png" alt="Hollow Knight: Silksong" />
-            <h2 id="Nota"><strong>Nota:</strong> 10/10</h2>
-            <h3 id="Desc1">Metroidvania com foco em exploração, combate preciso e uma atmosfera única.</h3>
+            <div id="ddlcTitDiv"><h1 id="ddlcTit">Doki Doki Literature Club</h1></div>
+            <img id="Img" src="../imgs/ddlc.png" alt="Doki Doki Literature Club" />
+            <h2 id="Nota"><strong>Nota:</strong> 8/10</h2>
+            <h3 id="Desc1">Web-novel, jogo de escolhas com reviravoltas.</h3>
         `,
         descHtml: `
             <h1 id="Sobre">Sobre o jogo</h1>
@@ -128,12 +128,12 @@ const reviewConteudo = {
         title: "Marvel Rivals",
         subtitle: "Hero-shooter com seus personagens favoritos da Marvel",
         score: "9/10",
-        image: "../imgs/silksong.png",
+        image: "../imgs/mr.png",
         gameHtml: `
-            <div id="silksongTitDiv"><h1 id="silksongTit">Hollow Knight: Silksong</h1></div>
-            <img id="Img" src="../imgs/silksong.png" alt="Hollow Knight: Silksong" />
-            <h2 id="Nota"><strong>Nota:</strong> 10/10</h2>
-            <h3 id="Desc1">Metroidvania com foco em exploração, combate preciso e uma atmosfera única.</h3>
+            <div id="mrTitDiv"><h1 id="mrTit">Marvel Rivals</h1></div>
+            <img id="Img" src="../imgs/mr.png" alt="Marvel Rivals" />
+            <h2 id="Nota"><strong>Nota:</strong> 9/10</h2>
+            <h3 id="Desc1">Hero-shooter com seus personagens favoritos da Marvel.</h3>
         `,
         descHtml: `
             <h1 id="Sobre">Sobre o jogo</h1>
@@ -145,12 +145,12 @@ const reviewConteudo = {
         title: "Postal 1",
         subtitle: "Shooter visto de cima, bem difícil",
         score: "7/10",
-        image: "../imgs/silksong.png",
+        image: "../imgs/postal.png",
         gameHtml: `
-            <div id="silksongTitDiv"><h1 id="silksongTit">Hollow Knight: Silksong</h1></div>
-            <img id="Img" src="../imgs/silksong.png" alt="Hollow Knight: Silksong" />
-            <h2 id="Nota"><strong>Nota:</strong> 10/10</h2>
-            <h3 id="Desc1">Metroidvania com foco em exploração, combate preciso e uma atmosfera única.</h3>
+            <div id="postalTitDiv"><h1 id="postalTit">Postal 1</h1></div>
+            <img id="Img" src="../imgs/postal.png" alt="Postal 1" />
+            <h2 id="Nota"><strong>Nota:</strong> 7/10</h2>
+            <h3 id="Desc1">Shooter visto de cima, bem difícil.</h3>
         `,
         descHtml: `
             <h1 id="Sobre">Sobre o jogo</h1>
@@ -162,12 +162,12 @@ const reviewConteudo = {
         title: "Slinkie Dinkie",
         subtitle: "Jogo de bicho virtual, relaxante",
         score: "8.5/10",
-        image: "../imgs/silksong.png",
+        image: "../imgs/spg.png",
         gameHtml: `
-            <div id="silksongTitDiv"><h1 id="silksongTit">Hollow Knight: Silksong</h1></div>
-            <img id="Img" src="../imgs/silksong.png" alt="Hollow Knight: Silksong" />
-            <h2 id="Nota"><strong>Nota:</strong> 10/10</h2>
-            <h3 id="Desc1">Metroidvania com foco em exploração, combate preciso e uma atmosfera única.</h3>
+            <div id="spgTitDiv"><h1 id="spgTit">Slinkie Dinkie</h1></div>
+            <img id="Img" src="../imgs/spg.png" alt="Slinkie Dinkie" />
+            <h2 id="Nota"><strong>Nota:</strong> 8.5/10</h2>
+            <h3 id="Desc1">Jogo de bicho virtual, relaxante.</h3>
         `,
         descHtml: `
             <h1 id="Sobre">Sobre o jogo</h1>
@@ -179,12 +179,12 @@ const reviewConteudo = {
         title: "Warframe",
         subtitle: "RPG e farm, bem satisfatório",
         score: "8/10",
-        image: "../imgs/silksong.png",
+        image: "../imgs/warframe.png",
         gameHtml: `
-            <div id="silksongTitDiv"><h1 id="silksongTit">Hollow Knight: Silksong</h1></div>
-            <img id="Img" src="../imgs/silksong.png" alt="Hollow Knight: Silksong" />
-            <h2 id="Nota"><strong>Nota:</strong> 10/10</h2>
-            <h3 id="Desc1">Metroidvania com foco em exploração, combate preciso e uma atmosfera única.</h3>
+            <div id="warframeTitDiv"><h1 id="warframeTit">Warframe</h1></div>
+            <img id="Img" src="../imgs/warframe.png" alt="Warframe" />
+            <h2 id="Nota"><strong>Nota:</strong> 8/10</h2>
+            <h3 id="Desc1">RPG e farm, bem satisfatório.</h3>
         `,
         descHtml: `
             <h1 id="Sobre">Sobre o jogo</h1>
