@@ -17,6 +17,12 @@
     }
 
 body{
+    margin: 0;  
+    padding: 0px;
+    background-color: var(--backgroundGame);
+}
+
+#content{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -24,6 +30,10 @@ body{
     padding: 0;
 }
 
+#voltar{
+    text-decoration: none;
+    color: white;
+}
 
 /*parte esquerda*/
 #game{
@@ -34,6 +44,7 @@ body{
     height: 100vh;
     justify-content: top;
     align-items: center;
+    padding: 0;
     
 }
 /*parte da direita*/
