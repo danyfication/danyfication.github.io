@@ -1,8 +1,8 @@
     :root{
         --HRtit: rgb(219, 219, 219);
-        --fundoReviews: rgb(45, 45, 45);
+        --fundoReviews: rgb(104, 104, 104);
         --blocoSelecionado: rgb(171, 95, 51);
-        --blocoNormal: rgb(80, 80, 80);
+        --blocoNormal: rgb(165, 165, 165);
     }
 
 /* Já é bem autodescritivo */

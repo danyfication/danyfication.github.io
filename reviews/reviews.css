@@ -10,7 +10,7 @@
         --postalGameColor: rgb(215, 44, 44);
         --spgGameColor: rgb(120, 65, 162);
         --warframeGameColor: rgb(70, 98, 126);
-        --backgroundGame:rgb(75, 75, 75);
+        --backgroundGame:rgb(104, 104, 104);
         --backgroundDesc:rgb(50, 50, 50);
         --lightTexts: rgb(219, 219, 219);
         --darkTexts: rgb(23, 23, 23);
@@ -30,9 +30,17 @@ body{
     padding: 0;
 }
 
+header{
+    padding: 10px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
 #voltar{
     text-decoration: none;
     color: white;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /*parte esquerda*/
@@ -63,6 +71,7 @@ body{
     width: 50%;
     height: 65%;
     border-radius: 15px;
+    margin: 10px;
 }
 #Nota{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -84,143 +93,66 @@ body{
 }
 
 
-/*estilo de TBOI*/
-#tboiTitDiv{
-    background-color: var(--tboiGameColor);
+.class{
     width: 100%;
     height: 50px;
     padding: 0;
-    margin: 10px;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+/*estilo de TBOI*/
+#tboiTitDiv{
+    background-color: var(--tboiGameColor);
 }
 /*estilo de SILKSONG*/
 #silksongTitDiv{
     background-color: var(--silksongGameColor);
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 /*estilo de ASTRONEER*/
 #astroneerTitDiv{
     background-color: var(--astroneerGameColor);
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /*estilo de AWARIA*/
 #awariaTitDiv{
     background-color: var(--awariaGameColor);
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /*estilo de BOPL*/
 #boplTitDiv{
     background-color: var(--boplGameColor);
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /*estilo de BTD6*/
 #btd6TitDiv{
     background-color: var(--btd6GameColor);
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /*estilo de DDLC*/
 #ddlcTitDiv{
     background-color: var(--ddlcGameColor);
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /*estilo de MR*/
 #mrTitDiv{
     background-color: var(--mrGameColor);
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /*estilo de POSTAL*/
 #postalTitDiv{
     background-color: var(--postalGameColor);
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /*estilo de SPG*/
 #spgTitDiv{
     background-color: var(--spgGameColor);
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /*estilo de WARFRAME*/
 #warframeTitDiv{
     background-color: var(--warframeGameColor);
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
