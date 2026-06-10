@@ -30,7 +30,7 @@ body{
     padding: 0;
 }
 
-header{
+.head{
     padding: 10px;
     display: flex;
     align-items: end;
@@ -61,6 +61,7 @@ header{
     width: 60%;
     height: 100vh;
     padding: 0px 20px;
+    overflow-y: auto;
 }
 
 #Tit{
@@ -72,7 +73,8 @@ header{
     height: 65%;
     border-radius: 15px;
     margin: 10px;
-}
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.349);
+}q  
 #Nota{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: var(--darkTexts);
@@ -93,11 +95,12 @@ header{
 }
 
 
-.class{
+.titles{
     width: 100%;
     height: 50px;
     padding: 0;
     margin: 0;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;

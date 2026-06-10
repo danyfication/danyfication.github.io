@@ -208,14 +208,14 @@ function qualReview() {
 
     //caso dê erro...
     if (!review) {
-        gameContainer.innerHTML = `<h1>Página não encontrada</h1><p>Review inválida.</p>`
-        descContainer.innerHTML = "Tente acessar uma review válida lá né"
+        gameContainer.innerHTML += `<h1>Página não encontrada</h1><p>Review inválida.</p>`
+        descContainer.innerHTML += "Tente acessar uma review válida lá né"
         return
     }
 
     //colocar as paradas
-    gameContainer.innerHTML = review.gameHtml
-    descContainer.innerHTML = review.descHtml
+    gameContainer.innerHTML += review.gameHtml
+    descContainer.innerHTML += review.descHtml
 }
 
 qualReview()
