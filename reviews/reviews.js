@@ -1,15 +1,10 @@
-﻿//pega os containers
+﻿// Containers onde a review vai ser montada
 const gameContainer = document.getElementById("game")
 const descContainer = document.getElementById("desc")
 
-
-// conteúdo q vai ir na page
+// Dados de cada review usada na página detalhada
 const reviewConteudo = {
     tboi: {
-        title: "The Binding Of Isaac",
-        subtitle: "Roguelike MUITO desafiador",
-        score: "9/10",
-        image: "../imgs/tboi.png",
         gameHtml: `
             <div id="tboiTitDiv" class="titles"><h1 id="tboiTit">The Binding Of Isaac</h1></div>
             <img id="Img" src="../imgs/tboi.png" alt="The Binding Of Isaac" />
@@ -23,10 +18,6 @@ const reviewConteudo = {
     },
 
     silksong: {
-        title: "Hollow Knight: Silksong",
-        subtitle: "Metroidvania / Souls-like incrível!",
-        score: "10/10",
-        image: "../imgs/silksong.png",
         gameHtml: `
             <div id="silksongTitDiv" class="titles"><h1 id="silksongTit">Hollow Knight: Silksong</h1></div>
             <img id="Img" src="../imgs/silksong.png" alt="Hollow Knight: Silksong" />
@@ -40,10 +31,6 @@ const reviewConteudo = {
     },
 
     astroneer: {
-        title: "Astroneer",
-        subtitle: "Quando se começa a jogar, é difícil parar, muito satisfatório",
-        score: "9/10",
-        image: "../imgs/astroneer.png",
         gameHtml: `
             <div id="astroneerTitDiv" class="titles"><h1 id="astroneerTit">Astroneer</h1></div>
             <img id="Img" src="../imgs/astroneer.png" alt="Astroneer" />
@@ -57,10 +44,6 @@ const reviewConteudo = {
     }, 
 
     awaria: {
-        title: "Awaria",
-        subtitle: "Um jogo de fases curto, porém com alta dificuldade e PUDIM",
-        score: "7.5/10",
-        image: "../imgs/awaria.png",
         gameHtml: `
             <div id="awariaTitDiv" class="titles"><h1 id="awariaTit">Awaria</h1></div>
             <img id="Img" src="../imgs/awaria.png" alt="Awaria" />
@@ -74,10 +57,6 @@ const reviewConteudo = {
     }, 
 
     bopl: {
-        title: "Bopl Battle",
-        subtitle: "Muito divertido com amigos e alta competitividade e combinações",
-        score: "8.5/10",
-        image: "../imgs/bopl.png",
         gameHtml: `
             <div id="boplTitDiv" class="titles"><h1 id="boplTit">Bopl Battle</h1></div>
             <img id="Img" src="../imgs/bopl.png" alt="Bopl Battle" />
@@ -91,10 +70,6 @@ const reviewConteudo = {
     }, 
 
     btd6: {
-        title: "bloons TD 6",
-        subtitle: "O melhor do gênero tower-defense",
-        score: "9/10",
-        image: "../imgs/btd6.png",
         gameHtml: `
             <div id="btd6TitDiv" class="titles"><h1 id="btd6Tit">Bloon TD 6</h1></div>
             <img id="Img" src="../imgs/btd6.png" alt="Bloon TD 6" />
@@ -108,10 +83,6 @@ const reviewConteudo = {
     }, 
 
     ddlc: {
-        title: "Doki Doki Literature Club",
-        subtitle: "Web-novel, jogo de escolhas com reviravoltas",
-        score: "8/10",
-        image: "../imgs/ddlc.png",
         gameHtml: `
             <div id="ddlcTitDiv" class="titles"><h1 id="ddlcTit">Doki Doki Literature Club</h1></div>
             <img id="Img" src="../imgs/ddlc.png" alt="Doki Doki Literature Club" />
@@ -125,10 +96,6 @@ const reviewConteudo = {
     }, 
 
     mr: {
-        title: "Marvel Rivals",
-        subtitle: "Hero-shooter com seus personagens favoritos da Marvel",
-        score: "9/10",
-        image: "../imgs/mr.png",
         gameHtml: `
             <div id="mrTitDiv" class="titles"><h1 id="mrTit">Marvel Rivals</h1></div>
             <img id="Img" src="../imgs/mr.png" alt="Marvel Rivals" />
@@ -142,10 +109,6 @@ const reviewConteudo = {
     }, 
 
     postal: {
-        title: "Postal 1",
-        subtitle: "Shooter visto de cima, bem difícil",
-        score: "7/10",
-        image: "../imgs/postal.png",
         gameHtml: `
             <div id="postalTitDiv" class="titles"><h1 id="postalTit">Postal 1</h1></div>
             <img id="Img" src="../imgs/postal.png" alt="Postal 1" />
@@ -159,10 +122,6 @@ const reviewConteudo = {
     }, 
 
     spg: {
-        title: "Slinkie Dinkie",
-        subtitle: "Jogo de bicho virtual, relaxante",
-        score: "8.5/10",
-        image: "../imgs/spg.png",
         gameHtml: `
             <div id="spgTitDiv" class="titles"><h1 id="spgTit">Slinkie Dinkie</h1></div>
             <img id="Img" src="../imgs/spg.png" alt="Slinkie Dinkie" />
@@ -176,10 +135,6 @@ const reviewConteudo = {
     }, 
 
     warframe: {
-        title: "Warframe",
-        subtitle: "RPG e farm, bem satisfatório",
-        score: "8/10",
-        image: "../imgs/warframe.png",
         gameHtml: `
             <div id="warframeTitDiv" class="titles"><h1 id="warframeTit">Warframe</h1></div>
             <img id="Img" src="../imgs/warframe.png" alt="Warframe" />
@@ -195,7 +150,62 @@ const reviewConteudo = {
 
 }
 
+// Cor manual para casos onde o automático não funciona tão bem
+const corTextoManual = {
+    awaria: '#111111',
+    silksong: '#111111',
+}
+
+function montarGameHtml(review) {
+    return review.gameHtml.replace(
+        /(<h2 id="Nota">[\s\S]*?<\/h2>\s*)(<h3 id="Desc1">[\s\S]*?<\/h3>)/,
+        '<div class="infoBloco">$1$2</div>'
+    )
+}
+
+// Calcula a luminosidade do fundo para decidir se o texto fica preto ou branco
+function getContrastTextColor(element) {
+    const computedColor = getComputedStyle(element).backgroundColor
+    const rgb = computedColor.match(/\d+/g)
+
+    if (!rgb || rgb.length < 3) return '#ffffff'
+
+    const [r, g, b] = rgb.map(Number)
+    const luminance = (0.2126 * r) + (0.7152 * g) + (0.0722 * b)
+
+    return luminance > 160 ? '#111111' : '#ffffff'
+}
+
+// Aplica a cor certa nos títulos da review atual
+function ajustarCorTitulos() {
+    const pageKey = getPageKey()
+
+    gameContainer.querySelectorAll('.titles').forEach((titleBox) => {
+        const textColor = corTextoManual[pageKey] || getContrastTextColor(titleBox)
+        titleBox.style.color = textColor
+
+        titleBox.querySelectorAll('h1, h2, h3').forEach((titleText) => {
+            titleText.style.color = textColor
+        })
+    })
+
+    const voltar = document.getElementById('voltar')
+    const titleBox = gameContainer.querySelector('.titles')
+
+    if (voltar && titleBox) {
+        const themeColor = getComputedStyle(titleBox).backgroundColor
+        const textColor = corTextoManual[pageKey] || getContrastTextColor(titleBox)
+
+        voltar.style.backgroundColor = themeColor
+        voltar.style.color = textColor
+        voltar.style.borderRadius = '999px'
+        voltar.style.padding = '8px 12px'
+        voltar.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.2)'
+    }
+}
+
 //pegar url pra saber qual review mostrar :)
+// Pega o nome da review pela hash da URL
 function getPageKey() {
     const page = window.location.hash
     return page ? page.replace("#", "") : ""
@@ -214,8 +224,10 @@ function qualReview() {
     }
 
     //colocar as paradas
-    gameContainer.innerHTML += review.gameHtml
+    gameContainer.innerHTML += montarGameHtml(review)
     descContainer.innerHTML += review.descHtml
+
+    ajustarCorTitulos()
 }
 
 qualReview()

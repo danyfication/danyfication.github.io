@@ -1,7 +1,7 @@
-// Local do conteúdo dos reviews
+// Ponto onde os cards das reviews são colocados na página
 const gridreview = document.getElementById("tudo")
 
-// Info das reviews
+// Dados fixos das reviews que aparecem na grade
 const titulos = [
     "The Binding Of Isaac", 
     "Hollow Knight: Silksong", 
@@ -46,7 +46,7 @@ const descricoes = [
     "10/10 - Não sei se é um metroidvania ou souls-like, mas é MUITO BOM!", 
     "9/10 - Bem relaxante e ótimo tanto single quanto multiplayer.", 
     "7.5/10 - 2D bem difícil de fases, bem curto porém legal.", 
-    "8.5/10 -Jogo 2D de disputa entre amigos, muito divertido e variado.", 
+    "8.5/10 - Jogo 2D de disputa entre amigos, muito divertido e variado.", 
     "9/10 - Tower-defense incrível!", 
     "8/10 - Uma web-novel de escolhas com várias reviravoltas e horror psicológico.", 
     "9/10 - Um ótimo hero-shooter principalmente para fãs da Marvel.", 
@@ -55,7 +55,7 @@ const descricoes = [
     "8/10 - Um jogo com muito conteúdo e coisas pra fazer.", 
 ]
 
-// Gerar os blocos das reviews
+// Monta os cards na tela com imagem, título e descrição
 for (let index = 0; index < titulos.length; index++) {
     const titulo = titulos[index];
     const img = caminhoimgs[index];
@@ -71,7 +71,7 @@ for (let index = 0; index < titulos.length; index++) {
     `
 }
 
-// Redirecionar para a página do review
+// Leva cada card para a página detalhada da review
 function jogopage(link){
     window.location.href = "./reviews/reviews.html#"+link;
 

@@ -1,3 +1,4 @@
+/* Paleta de cores das reviews detalhadas */
     :root{
         --tboiGameColor: rgb(150, 97, 0);
         --silksongGameColor: rgb(206, 83, 83);
@@ -16,17 +17,22 @@
         --darkTexts: rgb(23, 23, 23);
     }
 
+/* Base visual da página de detalhes */
 body{
-    margin: 0;  
-    padding: 0px;
-    background-color: var(--backgroundGame);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2b2b2b, #5a5a5a);
+    color: var(--lightTexts);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Estrutura principal em duas colunas */
 #content{
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin: 0;  
+    min-height: 100vh;
+    margin: 0;
     padding: 0;
 }
 
@@ -41,71 +47,130 @@ body{
     color: white;
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 999px;
+    padding: 8px 12px;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
-/*parte esquerda*/
+#voltar:hover {
+    transform: translateX(-4px);
+}
+
+
+/* Painel esquerdo da página de review */
 #game{
     display: flex;
     flex-direction: column;
-    background-color: var(--backgroundGame);
+    background: linear-gradient(180deg, rgba(104,104,104,0.95), rgba(60,60,60,0.98));
     width: 40%;
-    height: 100vh;
-    justify-content: top;
+    min-height: 100vh;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0;
-    
+    padding: 0 8px 8px;
+    box-sizing: border-box;
+    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.35);
 }
-/*parte da direita*/
+
+/* Painel direito com o texto da review */
 #desc{
-    background-color: var(--backgroundDesc);
+    background: linear-gradient(180deg, rgba(50,50,50,0.98), rgba(30,30,30,0.98));
     width: 60%;
-    height: 100vh;
-    padding: 0px 20px;
+    min-height: 100vh;
+    padding: 0 20px 24px;
     overflow-y: auto;
+    box-shadow: inset 4px 0 18px rgba(0, 0, 0, 0.15);
 }
 
 #Tit{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: var(--darkTexts);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
 }
 #Img{
     width: 50%;
-    height: 65%;
+    max-width: 260px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
     border-radius: 15px;
-    margin: 10px;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.349);
-}q  
+    margin: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
 #Nota{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--darkTexts);
-}
-#Desc1{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: var(--darkTexts);
+    color: white;
+    margin: 0;
     text-align: center;
-    padding: 0px 20px;
+}
+
+#Desc1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.infoBloco {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
 }
 #Sobre{
-    font-family: ar'Arial Narrow Bold', sans-serif;
-    color: var(--lightTexts);
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color: white;
 }
 #Desc2{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: var(--lightTexts);
+    color: white;
+    line-height: 1.5;
 }
 
 
+/* Caixa do título de cada review */
 .titles{
     width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 0;
-    margin-top: 15px;
+    min-height: 50px;
+    height: auto;
+    padding: 8px 10px;
+    margin: 15px 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
 }
+
+.titles h1 {
+    margin: 0;
+    font-size: clamp(1rem, 2.2vw + 0.6rem, 1.6rem);
+    line-height: 1.15;
+    word-break: break-word;
+}
+
+@media (max-width: 900px) {
+    .titles {
+        min-height: 56px;
+        padding: 10px 12px;
+    }
+
+    .titles h1 {
+        font-size: clamp(0.95rem, 1.8vw + 0.7rem, 1.3rem);
+    }
+}
+
 
 /*estilo de TBOI*/
 #tboiTitDiv{
