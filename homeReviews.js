@@ -1,78 +1,91 @@
-// Ponto onde os cards das reviews são colocados na página
 const gridreview = document.getElementById("tudo")
+const tabContainer = document.getElementById("qualReview")
 
-// Dados fixos das reviews que aparecem na grade
-const titulos = [
-    "The Binding Of Isaac", 
-    "Hollow Knight: Silksong", 
-    "Astroneer", 
-    "Awaria", 
-    "Bopl Battle", 
-    "Bloon TD 6", 
-    "Doki Doki Literature club", 
-    "Marvel Rivals", 
-    "Postal 1", 
-    "Slinkie Dinkie", 
-    "Warframe", 
-]
-const caminhoimgs = [
-    "tboi.png", 
-    "silksong.png", 
-    "astroneer.png", 
-    "awaria.png", 
-    "bopl.png", 
-    "btd6.png", 
-    "ddlc.png", 
-    "mr.png", 
-    "postal.png", 
-    "spg.png", 
-    "warframe.png", 
-]
-const links = [
-    "tboi", 
-    "silksong", 
-    "astroneer", 
-    "awaria", 
-    "bopl", 
-    "btd6", 
-    "ddlc", 
-    "mr", 
-    "postal", 
-    "spg", 
-    "warframe", 
-]
-const descricoes = [
-    "9/10 - Roguelike MUITO desafiador.",
-    "10/10 - Não sei se é um metroidvania ou souls-like, mas é MUITO BOM!", 
-    "9/10 - Bem relaxante e ótimo tanto single quanto multiplayer.", 
-    "7.5/10 - 2D bem difícil de fases, bem curto porém legal.", 
-    "8.5/10 - Jogo 2D de disputa entre amigos, muito divertido e variado.", 
-    "9/10 - Tower-defense incrível!", 
-    "8/10 - Uma web-novel de escolhas com várias reviravoltas e horror psicológico.", 
-    "9/10 - Um ótimo hero-shooter principalmente para fãs da Marvel.", 
-    "7/10 - Bem difícil porém simples, estilo antigo.", 
-    "8.5/10 - Um jogo para deixar ao lado enquanto se faz outras coisas.", 
-    "8/10 - Um jogo com muito conteúdo e coisas pra fazer.", 
-]
-
-// Monta os cards na tela com imagem, título e descrição
-for (let index = 0; index < titulos.length; index++) {
-    const titulo = titulos[index];
-    const img = caminhoimgs[index];
-    const link = links[index];
-    const desc = descricoes[index];
-
-    gridreview.innerHTML+=`
-        <button class="blocoR" onclick="jogopage('${link}')">
-            <h3 class="tit">${titulo}</h3>
-            <img src="./imgs/${img}" class="img">
-            <p class="textin">${desc}</p>
-        </button>
-    `
+const categories = {
+    games: {
+        label: "Jogos",
+        script: "gamesReviews.js",
+        style: "gamesReviews.css",
+        renderer: null
+    },
+    books: {
+        label: "Livros",
+        script: "booksReviews.js",
+        style: "booksReviews.css",
+        renderer: null
+    },
+    music: {
+        label: "Músicas",
+        script: "musicReviews.js",
+        style: "musicReviews.css",
+        renderer: null
+    }
 }
 
-// Leva cada card para a página detalhada da review
-function jogopage(link){
-    window.location.href = "./reviews/reviews.html#"+link;
+function loadCategoryScript(categoryKey) {
+    return new Promise((resolve) => {
+        const category = categories[categoryKey]
+        if (!category) return resolve()
 
+        if (category.renderer) return resolve()
+
+        const existingScript = document.querySelector(`script[data-category="${categoryKey}"]`)
+        if (existingScript) {
+            category.renderer = window["render" + categoryKey.charAt(0).toUpperCase() + categoryKey.slice(1) + "Reviews"]
+            return resolve()
+        }
+
+        const script = document.createElement("script")
+        script.src = category.script
+        script.dataset.category = categoryKey
+        script.onload = () => {
+            category.renderer = window["render" + categoryKey.charAt(0).toUpperCase() + categoryKey.slice(1) + "Reviews"]
+            resolve()
+        }
+        document.body.appendChild(script)
+    })
 }
+
+function setActiveTab(categoryKey) {
+    document.querySelectorAll('.tab-button').forEach((button) => {
+        button.classList.toggle('active', button.dataset.category === categoryKey)
+    })
+}
+
+function loadCategory(categoryKey) {
+    const category = categories[categoryKey]
+    if (!category) return
+
+    loadCategoryScript(categoryKey).then(() => {
+        if (!category.renderer) return
+
+        gridreview.innerHTML = ""
+        category.renderer(gridreview)
+        setActiveTab(categoryKey)
+
+        const currentStyle = document.getElementById('category-style')
+        if (currentStyle) {
+            currentStyle.remove()
+        }
+
+        const link = document.createElement('link')
+        link.id = 'category-style'
+        link.rel = 'stylesheet'
+        link.href = category.style
+        document.head.appendChild(link)
+    })
+}
+
+function createTabs() {
+    Object.entries(categories).forEach(([key, category]) => {
+        const button = document.createElement('button')
+        button.className = 'tab-button'
+        button.dataset.category = key
+        button.textContent = category.label
+        button.addEventListener('click', () => loadCategory(key))
+        tabContainer.appendChild(button)
+    })
+}
+
+createTabs()
+loadCategory('games')

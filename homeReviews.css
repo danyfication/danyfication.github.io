@@ -1,41 +1,95 @@
-/* Cores e tema da página de reviews */
-    :root{
-        --HRtit: rgb(219, 219, 219);
-        --bg: rgb(60, 60, 60);
-        --blocoSelecionado: rgb(171, 95, 51);
-        --blocoNormal: rgb(82, 82, 82);
-    }
+/* Cores e tema base da página de reviews */
+:root {
+    --HRtit: rgb(219, 219, 219);
+    --bg: rgb(60, 60, 60);
+    --blocoSelecionado: rgb(171, 95, 51);
+    --blocoNormal: rgb(82, 82, 82);
+    --tabInactive: rgba(73, 73, 73, 0.85);
+    --tabActive: rgb(255, 255, 255);
+    --backButton: rgb(171, 95, 51);
+}
 
 /* Grade dos cards de review */
-#tudo{
+#tudo {
     padding: 20px 35px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 70px;
 }
 
-body{
-    background-color:var(--bg);
-    margin: 0px;
-    padding: 0px;
+body {
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
     color: white;
-} 
+}
 
-#headerReviews{
+#headerReviews {
     display: flex;
+    flex-direction: column;
     background-color: rgba(73, 73, 73, 0.4);
     justify-content: center;
-    place-items: center;
+    align-items: center;
+    padding: 24px 20px 14px;
 }
-#HRtit{
-    font-family:Georgia, 'Times New Roman', Times, serif;
+
+.back-button {
+    align-self: flex-start;
+    margin-bottom: 12px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--backButton);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    background-color: var(--blocoSelecionado);
+}
+
+#HRtit {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--HRtit);
+    margin: 0 0 12px;
 }
-    
+
+#qualReview {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-button {
+    border: none;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-weight: 700;
+    color: white;
+    background-color: var(--tabInactive);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tab-button:hover {
+    transform: translateY(-2px);
+}
+
+.tab-button.active {
+    background-color: var(--tabActive);
+    color: #1d1d1d;
+}
+
 /* Estilo de cada card de review */
-.blocoR{
+.blocoR {
     width: 100%;
-    height:100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     place-items: center;
@@ -50,7 +104,7 @@ body{
     overflow: hidden;
 }
 
-.blocoR:hover{
+.blocoR:hover {
     background-color: var(--blocoSelecionado);
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
@@ -71,17 +125,21 @@ body{
     transform: scale(1.02);
 }
 
-
-.tit{
+.tit {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
+    margin-bottom: 8px;
 }
-.img{
+
+.img {
     width: 100px;
     height: 150px;
     border-radius: 10px;
 }
-.textin{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+.textin {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
+    padding: 0 12px 8px;
+    text-align: center;
 }

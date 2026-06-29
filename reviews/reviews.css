@@ -15,6 +15,7 @@
         --backgroundDesc:rgb(50, 50, 50);
         --lightTexts: rgb(219, 219, 219);
         --darkTexts: rgb(23, 23, 23);
+        --backButton: rgb(171, 95, 51);
     }
 
 /* Base visual da página de detalhes */
@@ -53,11 +54,14 @@ body{
     text-align: center;
     border-radius: 999px;
     padding: 8px 12px;
+    background-color: var(--backButton);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 #voltar:hover {
     transform: translateX(-4px);
+    background-color: #8c491f;
 }
 
 

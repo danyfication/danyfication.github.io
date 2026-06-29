@@ -1,0 +1,87 @@
+/* Cores e tema da página de reviews */
+    :root{
+        --HRtit: rgb(219, 219, 219);
+        --bg: rgb(60, 60, 60);
+        --blocoSelecionado: rgb(171, 95, 51);
+        --blocoNormal: rgb(82, 82, 82);
+    }
+
+/* Grade dos cards de review */
+#tudo{
+    padding: 20px 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 70px;
+}
+
+body{
+    background-color:var(--bg);
+    margin: 0px;
+    padding: 0px;
+    color: white;
+} 
+
+#headerReviews{
+    display: flex;
+    background-color: rgba(73, 73, 73, 0.4);
+    justify-content: center;
+    place-items: center;
+}
+#HRtit{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: var(--HRtit);
+}
+    
+/* Estilo de cada card de review */
+.blocoR{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    background-color: var(--blocoNormal);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+    transform-origin: center center;
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden;
+}
+
+.blocoR:hover{
+    background-color: var(--blocoSelecionado);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.blocoR .tit,
+.blocoR .textin {
+    transition: transform 0.35s ease, color 0.35s ease;
+    transform-origin: center center;
+}
+
+.blocoR:hover .tit {
+    transform: scale(1.04);
+}
+
+.blocoR:hover .textin {
+    transform: scale(1.02);
+}
+
+
+.tit{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+.img{
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+}
+.textin{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}

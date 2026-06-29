@@ -189,19 +189,6 @@ function ajustarCorTitulos() {
         })
     })
 
-    const voltar = document.getElementById('voltar')
-    const titleBox = gameContainer.querySelector('.titles')
-
-    if (voltar && titleBox) {
-        const themeColor = getComputedStyle(titleBox).backgroundColor
-        const textColor = corTextoManual[pageKey] || getContrastTextColor(titleBox)
-
-        voltar.style.backgroundColor = themeColor
-        voltar.style.color = textColor
-        voltar.style.borderRadius = '999px'
-        voltar.style.padding = '8px 12px'
-        voltar.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.2)'
-    }
 }
 
 //pegar url pra saber qual review mostrar :)
